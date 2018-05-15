@@ -1,0 +1,828 @@
+[subham@localhost ~]$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+[subham@localhost ~]$ sudo apt-get update
+[sudo] password for subham: 
+subham is not in the sudoers file.  This incident will be reported.
+[subham@localhost ~]$ sudo su
+[sudo] password for subham: 
+Sorry, try again.
+[sudo] password for subham: 
+Sorry, try again.
+[sudo] password for subham: 
+subham is not in the sudoers file.  This incident will be reported.
+[subham@localhost ~]$ 
+[subham@localhost ~]$ 
+[subham@localhost ~]$ sudo su
+[sudo] password for subham: 
+Sorry, try again.
+[sudo] password for subham: 
+Sorry, try again.
+[sudo] password for subham: 
+sudo: 3 incorrect password attempts
+[subham@localhost ~]$ su
+Password: 
+su: Authentication failure
+[subham@localhost ~]$ su
+Password: 
+[root@localhost subham]# apt-
+apt-cache   apt-cdrom   apt-config  apt-get     apt-shell   
+[root@localhost subham]# apt-
+apt-cache   apt-cdrom   apt-config  apt-get     apt-shell   
+[root@localhost subham]# apt-get update
+Ign http://download.fedoraproject.org fedora/linux/development/rawhide/x86_64/os/ repomd.xml
+E: Repository model not found for http://download.fedoraproject.org/pub/ fedora/linux/development/rawhide/x86_64/os/
+[root@localhost subham]# apt-get git
+E: Invalid operation git
+[root@localhost subham]# dnf -y update
+Last metadata expiration check: 4:43:23 ago on Mon May 14 14:05:18 2018.
+Dependencies resolved.
+================================================================================
+ Package               Arch    Version                Repository           Size
+================================================================================
+Upgrading:
+ flash-plugin          x86_64  29.0.0.171-release     adobe-linux-x86_64  8.6 M
+ google-chrome-stable  x86_64  66.0.3359.170-1        google-chrome        50 M
+
+Transaction Summary
+================================================================================
+Upgrade  2 Packages
+
+Total download size: 59 M
+Downloading Packages:
+(1/2): flash-player-npapi-29.0.0.171-release.x8 398 kB/s | 8.6 MB     00:22    
+(2/2): google-chrome-stable-66.0.3359.170-1.x86 1.9 MB/s |  50 MB     00:26    
+--------------------------------------------------------------------------------
+Total                                           2.2 MB/s |  59 MB     00:26     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Upgrading   : google-chrome-stable-66.0.3359.170-1.x86_64                 1/4 
+Redirecting to /bin/systemctl start  atd.service
+  Upgrading   : flash-plugin-29.0.0.171-release.x86_64                      2/4 
+  Cleanup     : google-chrome-stable-66.0.3359.139-1.x86_64                 3/4 
+  Cleanup     : flash-plugin-29.0.0.140-release.x86_64                      4/4 
+Running as unit: run-rb4e27c9002d44b33b1df86e8d21aafe5.service
+  Verifying   : flash-plugin-29.0.0.171-release.x86_64                      1/4 
+  Verifying   : google-chrome-stable-66.0.3359.170-1.x86_64                 2/4 
+  Verifying   : google-chrome-stable-66.0.3359.139-1.x86_64                 3/4 
+  Verifying   : flash-plugin-29.0.0.140-release.x86_64                      4/4 
+
+Upgraded:
+  flash-plugin.x86_64 29.0.0.171-release                                        
+  google-chrome-stable.x86_64 66.0.3359.170-1                                   
+
+Complete!
+[root@localhost subham]# dnf -y install git
+Last metadata expiration check: 4:44:29 ago on Mon May 14 14:05:18 2018.
+Package git-2.9.5-3.fc25.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost subham]# git 
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+[root@localhost subham]# git -h
+Unknown option: -h
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+[root@localhost subham]# git status
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[root@localhost subham]# git https://github.com/sesa58149/TeSysT_Test.git IntBranch
+git: 'https://github.com/sesa58149/TeSysT_Test.git' is not a git command. See 'git --help'.
+[root@localhost subham]# git clone https://github.com/sesa58149/TeSysT_Test.git IntBranch
+Cloning into 'IntBranch'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+[root@localhost subham]# ls
+a.out    diagClient  Downloads  Music     subham                     Videos
+Arduino  diagServer  IntBranch  Pictures  Templates
+Desktop  Documents   modi.pgn   Public    'Untitled Chess Game.pgn'
+[root@localhost subham]# cd IntBranch/
+[root@localhost IntBranch]# git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+[root@localhost IntBranch]# gedit test.c
+
+(gedit:16430): GLib-GIO-CRITICAL **: g_dbus_proxy_new_sync: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(gedit:16430): GLib-GIO-CRITICAL **: g_dbus_proxy_get_name_owner: assertion 'G_IS_DBUS_PROXY (proxy)' failed
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+** (gedit:16430): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:16430): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:16430): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:16430): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+[root@localhost IntBranch]# gcc test.c 
+test.c: In function ‘main’:
+test.c:3:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf(" hello World\n");
+  ^~~~~~
+test.c:3:2: warning: incompatible implicit declaration of built-in function ‘printf’
+test.c:3:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+[root@localhost IntBranch]# ls
+a.out  test.c
+[root@localhost IntBranch]# ./a.out 
+ hello World
+[root@localhost IntBranch]# git add test.c 
+[root@localhost IntBranch]# git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   test.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a.out
+
+[root@localhost IntBranch]# git commit test.c -m "V1.0"
+[master (root-commit) 624a51e] V1.0
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+ create mode 100644 test.c
+[root@localhost IntBranch]# git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a.out
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@localhost IntBranch]# git log
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost IntBranch]# git push
+Username for 'https://github.com': pawan123
+Password for 'https://pawan123@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/sesa58149/TeSysT_Test.git/'
+[root@localhost IntBranch]# git push
+Username for 'https://github.com': sesa58149	
+Password for 'https://sesa58149@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 248 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sesa58149/TeSysT_Test.git
+ * [new branch]      master -> master
+[root@localhost IntBranch]# git clone -b TeSysT_TestDev https://github.com/sesa58149/TeSysT_Test.git DevBranch
+Cloning into 'DevBranch'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+[root@localhost IntBranch]# ls
+a.out  DevBranch  test.c
+[root@localhost IntBranch]# cd DevBranch/
+[root@localhost DevBranch]# ls
+test.c
+[root@localhost DevBranch]# gedit Makefile
+
+(gedit:16749): GLib-GIO-CRITICAL **: g_dbus_proxy_new_sync: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(gedit:16749): GLib-GIO-CRITICAL **: g_dbus_proxy_get_name_owner: assertion 'G_IS_DBUS_PROXY (proxy)' failed
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+** (gedit:16749): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:16749): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:16749): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:16749): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+[root@localhost DevBranch]# ls
+Makefile  test.c
+[root@localhost DevBranch]# chmod +x Makefile 
+[root@localhost DevBranch]# ./Makefile 
+gcc: error: output: No such file or directory
+[root@localhost DevBranch]# gedit Makefile
+
+(gedit:16795): GLib-GIO-CRITICAL **: g_dbus_proxy_new_sync: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(gedit:16795): GLib-GIO-CRITICAL **: g_dbus_proxy_get_name_owner: assertion 'G_IS_DBUS_PROXY (proxy)' failed
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+** (gedit:16795): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:16795): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:16795): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:16795): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+[root@localhost DevBranch]# ./Makefile 
+gcc: error: output: No such file or directory
+[root@localhost DevBranch]# gedit Makefile
+
+(gedit:16821): GLib-GIO-CRITICAL **: g_dbus_proxy_new_sync: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(gedit:16821): GLib-GIO-CRITICAL **: g_dbus_proxy_get_name_owner: assertion 'G_IS_DBUS_PROXY (proxy)' failed
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+** (gedit:16821): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:16821): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:16821): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:16821): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+[root@localhost DevBranch]# ./Makefile 
+test.c: In function ‘main’:
+test.c:3:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf(" hello World\n");
+  ^~~~~~
+test.c:3:2: warning: incompatible implicit declaration of built-in function ‘printf’
+test.c:3:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+[root@localhost DevBranch]# ls
+a.out  Makefile  test.c
+[root@localhost DevBranch]# ./a.out 
+ hello World
+[root@localhost DevBranch]# rm -f a.out 
+[root@localhost DevBranch]# mv Makefile ../../
+[root@localhost DevBranch]# ls
+test.c
+[root@localhost DevBranch]# git status
+On branch TeSysT_TestDev
+Your branch is up-to-date with 'origin/TeSysT_TestDev'.
+nothing to commit, working tree clean
+[root@localhost DevBranch]# git checkout b dev
+error: pathspec 'b' did not match any file(s) known to git.
+error: pathspec 'dev' did not match any file(s) known to git.
+[root@localhost DevBranch]# git checkout -b dev
+Switched to a new branch 'dev'
+[root@localhost DevBranch]# git branch a
+[root@localhost DevBranch]# git branch -a
+  TeSysT_TestDev
+  a
+* dev
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/TeSysT_TestDev
+  remotes/origin/master
+[root@localhost DevBranch]# git branch
+  TeSysT_TestDev
+  a
+* dev
+[root@localhost DevBranch]# git checkout master
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+[root@localhost DevBranch]# git branch
+  TeSysT_TestDev
+  a
+  dev
+* master
+[root@localhost DevBranch]# git checkout dev
+Switched to branch 'dev'
+[root@localhost DevBranch]# ls
+test.c
+[root@localhost DevBranch]# mv ../../M
+Makefile  Music/    
+[root@localhost DevBranch]# mv ../../Makefile .
+[root@localhost DevBranch]# ls
+Makefile  test.c
+[root@localhost DevBranch]# ./Makefile 
+test.c: In function ‘main’:
+test.c:3:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf(" hello World\n");
+  ^~~~~~
+test.c:3:2: warning: incompatible implicit declaration of built-in function ‘printf’
+test.c:3:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+[root@localhost DevBranch]# ./a.out 
+ hello World
+[root@localhost DevBranch]# ls
+a.out  Makefile  test.c
+[root@localhost DevBranch]# rm -r
+rm: missing operand
+Try 'rm --help' for more information.
+[root@localhost DevBranch]# rm -f a.out 
+[root@localhost DevBranch]# ls
+Makefile  test.c
+[root@localhost DevBranch]# git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Makefile
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@localhost DevBranch]# git add -A
+[root@localhost DevBranch]# git status
+On branch dev
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Makefile
+
+[root@localhost DevBranch]# git commit -m "Added Makefile"
+[dev 6eddd7f] Added Makefile
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git status
+On branch dev
+nothing to commit, working tree clean
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git checkout dev
+Already on 'dev'
+[root@localhost DevBranch]# git branch
+  TeSysT_TestDev
+  a
+* dev
+  master
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+[root@localhost DevBranch]# ls
+test.c
+[root@localhost DevBranch]# git log
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git merge dev
+Updating 624a51e..6eddd7f
+Fast-forward
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git push
+Username for 'https://github.com': sesa58149	
+Password for 'https://sesa58149@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sesa58149/TeSysT_Test.git
+   624a51e..6eddd7f  master -> master
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git push https://github.com/sesa58149/TeSysT_TestDev.git
+Username for 'https://github.com': sesa58149
+Password for 'https://sesa58149@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/sesa58149/TeSysT_TestDev.git/' not found
+[root@localhost DevBranch]# git merge https://github.com/sesa58149/TeSysT_TestDev.git
+merge: https://github.com/sesa58149/TeSysT_TestDev.git - not something we can merge
+[root@localhost DevBranch]# git diff https://github.com/sesa58149/TeSysT_TestDev.git
+fatal: Invalid object name 'https'.
+[root@localhost DevBranch]# git merge https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev
+merge: https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev - not something we can merge
+[root@localhost DevBranch]# git merge https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev .
+merge: https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev - not something we can merge
+[root@localhost DevBranch]# git merge https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev master
+merge: https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev - not something we can merge
+[root@localhost DevBranch]# git merge https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev master
+merge: https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev - not something we can merge
+[root@localhost DevBranch]# 
+[root@localhost DevBranch]# 
+[root@localhost DevBranch]# 
+[root@localhost DevBranch]# 
+[root@localhost DevBranch]# 
+[root@localhost DevBranch]# git checkout https://github.com/sesa58149/TeSysT_TestDev.git
+error: pathspec 'https://github.com/sesa58149/TeSysT_TestDev.git' did not match any file(s) known to git.
+[root@localhost DevBranch]# git checkout https://github.com/sesa58149/TeSysT_TestDev
+error: pathspec 'https://github.com/sesa58149/TeSysT_TestDev' did not match any file(s) known to git.
+[root@localhost DevBranch]# git checkout https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev
+error: pathspec 'https://github.com/sesa58149/TeSysT_Test.git/TeSysT_TestDev' did not match any file(s) known to git.
+[root@localhost DevBranch]# git branch -a
+  TeSysT_TestDev
+  a
+  dev
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/TeSysT_TestDev
+  remotes/origin/master
+[root@localhost DevBranch]# git checkout remote/origin/TeSysT_TestDev
+error: pathspec 'remote/origin/TeSysT_TestDev' did not match any file(s) known to git.
+[root@localhost DevBranch]# git checkout remotes/origin/TeSysT_TestDev
+Note: checking out 'remotes/origin/TeSysT_TestDev'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 624a51e... V1.0
+[root@localhost DevBranch]# git branch
+* (HEAD detached at origin/TeSysT_TestDev)
+  TeSysT_TestDev
+  a
+  dev
+  master
+[root@localhost DevBranch]# git merge master
+Updating 624a51e..6eddd7f
+Fast-forward
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+[root@localhost DevBranch]# git branch
+  TeSysT_TestDev
+  a
+  dev
+* master
+[root@localhost DevBranch]# git checkout remotes/origin/TeSysT_TestDev
+Note: checking out 'remotes/origin/TeSysT_TestDev'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 624a51e... V1.0
+[root@localhost DevBranch]# git log
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git merge master
+Updating 624a51e..6eddd7f
+Fast-forward
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git branch
+* (HEAD detached from origin/TeSysT_TestDev)
+  TeSysT_TestDev
+  a
+  dev
+  master
+[root@localhost DevBranch]# git branch -d a
+Deleted branch a (was 624a51e).
+[root@localhost DevBranch]# git branch
+* (HEAD detached from origin/TeSysT_TestDev)
+  TeSysT_TestDev
+  dev
+  master
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git commit -m "Dev Branch"
+HEAD detached from origin/TeSysT_TestDev
+nothing to commit, working tree clean
+[root@localhost DevBranch]# git tree
+git: 'tree' is not a git command. See 'git --help'.
+
+Did you mean this?
+	mktree
+[root@localhost DevBranch]# git nodw
+git: 'nodw' is not a git command. See 'git --help'.
+
+Did you mean this?
+	notes
+[root@localhost DevBranch]# git node
+git: 'node' is not a git command. See 'git --help'.
+
+Did you mean this?
+	notes
+[root@localhost DevBranch]# git diff
+[root@localhost DevBranch]# git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git checkout remotes/origin/TeSysT_TestDev
+Note: checking out 'remotes/origin/TeSysT_TestDev'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 624a51e... V1.0
+[root@localhost DevBranch]# git log
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git merge dev
+Updating 624a51e..6eddd7f
+Fast-forward
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git push 
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+[root@localhost DevBranch]# git branch
+* (HEAD detached from origin/TeSysT_TestDev)
+  TeSysT_TestDev
+  dev
+  master
+[root@localhost DevBranch]# get checkout TeSysT_TestDev
+bash: get: command not found...
+Similar command is: 'git'
+[root@localhost DevBranch]# git checkout TeSysT_TestDev
+Previous HEAD position was 6eddd7f... Added Makefile
+Switched to branch 'TeSysT_TestDev'
+Your branch is up-to-date with 'origin/TeSysT_TestDev'.
+[root@localhost DevBranch]# git branch
+* TeSysT_TestDev
+  dev
+  master
+[root@localhost DevBranch]# git merger master
+git: 'merger' is not a git command. See 'git --help'.
+
+Did you mean this?
+	merge
+[root@localhost DevBranch]# git merge master
+Updating 624a51e..6eddd7f
+Fast-forward
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Makefile
+[root@localhost DevBranch]# git log
+commit 6eddd7ff1a0a26195059ca367d963b375a910cb1
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 19:13:21 2018 -0400
+
+    Added Makefile
+
+commit 624a51e7cc5e391bb6543ffc09f8e1b16b00eb14
+Author: root <root@localhost.localdomain>
+Date:   Mon May 14 18:59:01 2018 -0400
+
+    V1.0
+[root@localhost DevBranch]# git branch
+* TeSysT_TestDev
+  dev
+  master
+[root@localhost DevBranch]# git push 
+Username for 'https://github.com': sesa58149
+Password for 'https://sesa58149@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/sesa58149/TeSysT_Test.git
+   624a51e..6eddd7f  TeSysT_TestDev -> TeSysT_TestDev
+[root@localhost DevBranch]# git status
+On branch TeSysT_TestDev
+Your branch is up-to-date with 'origin/TeSysT_TestDev'.
+nothing to commit, working tree clean
+[root@localhost DevBranch]# 
+
