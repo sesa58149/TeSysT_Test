@@ -1,3 +1,4 @@
+#include<stdio.h>
 void main()
 {
 	printf(" TeSysT Test V1.1.000\n");
