@@ -5,6 +5,6 @@ void main()
 	printf("sum = %d\n", i+j);
 	printf("my first jenkins compilation\n");
 	printf("my first jenkins compilation-1\n");
-	printf("my first jenkins compilation-21\n");
+	printf("my first jenkins compilation-22\n");
 	return;
 }
